@@ -13,7 +13,7 @@ Calculator.prototype.scan = function(inputs) {
 Calculator.prototype.getTotalScore = function (frames) {
   var totalScore = 0;
   frames.forEach(function(oneFrame){
-  totalScore += oneFrame.score;
+    totalScore += oneFrame.score;
   });
   return totalScore;
 };
