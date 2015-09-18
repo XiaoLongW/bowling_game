@@ -37,7 +37,7 @@ describe('Game', function(){
 		});
 	});
 
-	describe('#setTotalScore =()', function () {
+	describe('#setTotalScore()', function () {
 		it('should set right', function () {
 			var input = '5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5';
 
@@ -46,6 +46,26 @@ describe('Game', function(){
 			game.setTotalScore();
 
 			expect(game.totalScore).toBe(150);
+		});
+
+		it('should set right', function () {
+			var input = 'X|7/|9-|X|-8|8/|-6|X|X|X||81';
+
+			game.setFrames(input);
+			game.setEachScore();
+			game.setTotalScore();
+
+			expect(game.totalScore).toBe(167);
+		});
+
+		it('should set right', function () {
+			var input = 'X|X|X|X|X|X|X|X|X|X||XX';
+
+			game.setFrames(input);
+			game.setEachScore();
+			game.setTotalScore();
+
+			expect(game.totalScore).toBe(300);
 		});
 	});
 });
